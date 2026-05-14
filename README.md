@@ -1,16 +1,72 @@
-# React + Vite
+# GIT HUB REPOSITORY LINK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://github.com/SANJAY19122004/LibraryApp
 
-Currently, two official plugins are available:
+# LIBRARY APP
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+AN ONLINE LIBRARY APP BUILT WITH REACT AND VITE
 
-## React Compiler
+## WHAT IT DO
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- BROWSE BOOKS BY CATEGORY
+- SEARCH BOOKS BY TITLE OR AUTHOR
+- VIEW DETAILS OF THE BOOK
+- ADD NEW BOOKS TO THE LIBRARY
+- 404 PAGE FOR INVALID ROUTES
 
-## Expanding the ESLint configuration
+## USED
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Vite
+- React Router DOM
+- Redux Toolkit
+- CSS
+
+## HOW TO RUN
+
+Make sure Node.js is installed.
+
+1. Clone the repo:
+
+   git clone https://github.com/SANJAY19122004/LibraryApp.git
+   cd LibraryApp
+
+2. Install packages:
+
+   npm install
+
+3. Start the app:
+
+   npm run dev
+
+4. Open `http://localhost:5173` in your browser
+
+## STRUCTURE OF COPROJECT FOLDER
+
+src/
+|-- components/
+│ |-- Navbar.jsx
+|-- data/
+│ |-- books.js
+|-- pages/
+│ |-- Home.jsx
+│ |-- BrowseBooks.jsx
+│ |-- BookDetails.jsx
+│ |-- AddBook.jsx
+│ |-- NotFound.jsx
+|-- store/
+│ |-- store.js
+│ |-- booksSlice.js
+|-- App.jsx
+|-- main.jsx
+
+## Usage
+
+- CLICK A CATEGORY ON HOMEPAGE TO FILTER BOOKS
+- USE SEARCH BAR ON BROWSE PAGE TO FIND BOOKS
+- CLICK VIEW DETAILS TO SEE THE INFO OF FULL BOOK
+- GO TO ADD BOOK TO ADD YOUR OWN BOOK
+
+# HOW TO CHECK APP IS WORKING
+
+npm run dev
