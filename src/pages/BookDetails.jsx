@@ -1,12 +1,11 @@
 import { useParams, Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-// Book Details page - shows full info about a selected book
+// Book Details page shows full info about a selected book
 const BookDetails = () => {
-  // Get book id from URL (e.g. /book/1)
+  // Get book id from URL 
   const { id } = useParams();
 
-  // Get all books from Redux store
   const books = useSelector((state) => state.books.list);
 
   // Find the book that matches the id from URL
@@ -16,9 +15,9 @@ const BookDetails = () => {
   if (!book) {
     return (
       <div className="not-found-book">
-        <h2>Book not found!</h2>
+        <h2>BOOK NOT FOUND!</h2>
         <Link to="/books" className="btn-primary">
-          Back to Browse
+         BACK TO BROWSE
         </Link>
       </div>
     );

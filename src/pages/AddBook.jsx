@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addBook } from "../store/booksSlice";
-
+// add book page with form and validation
 const AddBook = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ const AddBook = () => {
   const [rating, setRating] = useState("");
 
   const [errors, setErrors] = useState({});
-
+// validate all fields before submitting
   const validate = () => {
     const newErrors = {};
 
@@ -29,16 +29,16 @@ const AddBook = () => {
 
     return newErrors;
   };
-
+// handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
-
+// run validation
     const foundErrors = validate();
     if (Object.keys(foundErrors).length > 0) {
       setErrors(foundErrors);
       return;
     }
-
+// creating new book object
     const newBook = {
       id: Date.now(),
       title: title.trim(),
@@ -47,7 +47,7 @@ const AddBook = () => {
       description: description.trim(),
       rating: parseFloat(rating),
     };
-
+//dispatching redux
     dispatch(addBook(newBook));
 
     navigate("/books");

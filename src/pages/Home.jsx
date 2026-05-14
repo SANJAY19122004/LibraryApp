@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-
+// Home page with welcome message, categories and popular books
 const Home = () => {
+  // Get books from Redux store
   const books = useSelector((state) => state.books.list);
 
   const categories = ["Fiction", "Non-Fiction", "Sci-Fi", "Fantasy"];
-
+  // Show only first 4 books as popular books
   const popularBooks = books.slice(0, 4);
 
   return (

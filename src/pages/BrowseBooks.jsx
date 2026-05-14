@@ -2,15 +2,16 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 
+// Browse Books page with search and category filter
 const BrowseBooks = () => {
   const { category } = useParams();
 
   const books = useSelector((state) => state.books.list);
-
+  // Search input state
   const [search, setSearch] = useState("");
-
+  // List of all categories for filter buttons
   const categories = ["All", "Fiction", "Non-Fiction", "Sci-Fi", "Fantasy"];
-
+  // Filter books by category and search input
   const filteredBooks = books.filter((book) => {
     const matchesCategory =
       !category || category === "All" ? true : book.category === category;
